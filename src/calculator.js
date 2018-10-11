@@ -45,10 +45,9 @@ function calculateSum(numbers) {
   const _ = require("underscore");
   var sum = 0;
 
-
   _.each(numbers, function (number) {
       var n = parseInt(number);
-      if (n > 1000) {
+      if (n > 1000 || isNaN(n)) {
         n = 0;
       }
       sum += n;
