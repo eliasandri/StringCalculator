@@ -11,3 +11,7 @@ it("should return number when only one number is in the string", () => {
 it("should return sum of two numbers when two numbers are in the string", () => {
   expect(add("1,2")).toBe(3);
 })
+
+it("should summerize multiple numbers", () => {
+  expect(add("1,2,3")).toBe(6);
+})
