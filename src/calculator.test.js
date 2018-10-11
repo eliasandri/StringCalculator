@@ -23,3 +23,7 @@ it("should summerize multiple numbers", () => {
 it("should throw an exception if input is a negative number", () => {
     expect(add("2,-4,3,-5")).toBe("Negatives not allowed: -4,-5");
   })
+
+  it("should return sum of two numbers when two numbers are in the string", () => {
+    expect(add("1001,2,3")).toBe(5);
+  })

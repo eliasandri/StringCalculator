@@ -48,7 +48,9 @@ function calculateSum(numbers) {
 
   _.each(numbers, function (number) {
       var n = parseInt(number);
-
+      if (n > 1000) {
+        n = 0;
+      }
       sum += n;
     });
 
