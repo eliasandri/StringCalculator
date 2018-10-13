@@ -1,6 +1,8 @@
 function add(numbers){
 
 var numbers = numbers.replace(/\n|;|\/|\\|[.*]|[%]|[$]/g,",");
+var numberArray = numbers.split(",");
+
 try {
   if (numbers == "") {
     return 0;
@@ -8,26 +10,18 @@ try {
 
   if(numbers.includes("-"))
   {
-    var numberArray = numbers.split(",");
-    var negativeArray = createNegativeArray(numberArray);
-    return negativeArray;
+    return negativeArray = createNegativeArray(numberArray);
   }
-  if(numbers.includes(","||"\n"))
-  {
 
-    var numberArray = numbers.split(",");
     var sum = calculateSum(numberArray);
     return sum;
-  }
 
-  else
-
-  return parseInt(numbers);
 }
 catch(errorMessage) {
   return errorMessage;
 }
 }
+
 function createNegativeArray(numberArray) {
   const _ = require("underscore");
   var negativeArray = [];
@@ -41,6 +35,7 @@ function createNegativeArray(numberArray) {
 
   return throwErrorMessageForNegativeNumbers(negativeArray);
 }
+
 function calculateSum(numbers) {
   const _ = require("underscore");
   var sum = 0;
